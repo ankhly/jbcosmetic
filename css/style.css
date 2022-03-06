@@ -476,12 +476,12 @@ body.ie ._ibg img {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 33.333%;
           flex: 0 1 33.333%;
-  z-index: 8;
+  z-index: 12;
   position: relative;
 }
 
 .header__logo img {
-  z-index: 8;
+  z-index: 12;
 }
 
 .header__logo::after {
@@ -760,10 +760,6 @@ body.ie ._ibg img {
   transition: all 0.8s ease 0s;
 }
 
-.progress-page__title:not(:last-child) {
-  margin: 0px 0px 0px 0px;
-}
-
 .progress-page__title._active {
   -webkit-transform: translate(0px, 0px);
       -ms-transform: translate(0px, 0px);
@@ -778,7 +774,7 @@ body.ie ._ibg img {
 }
 
 .progress-page__slider {
-  padding: 50px 20px;
+  padding: 5px 17px 50px 17px;
   margin: 0px -15px;
   position: relative;
 }
@@ -786,8 +782,8 @@ body.ie ._ibg img {
 .progress-page__slide {
   padding: 20px 20px;
   background-color: white;
-  -webkit-box-shadow: 0px 0px 13px #e6dc76;
-          box-shadow: 0px 0px 13px #e6dc76;
+  -webkit-box-shadow: 0px 0px 13px #837e47;
+          box-shadow: 0px 0px 13px #837e47;
 }
 
 .controls-progress__dotts {
@@ -977,8 +973,8 @@ body.ie ._ibg img {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 20%;
-  -webkit-box-shadow: 0px 0px 25px #c2bd83;
-          box-shadow: 0px 0px 25px #c2bd83;
+  -webkit-box-shadow: 0px 0px 25px #837f58;
+          box-shadow: 0px 0px 25px #837f58;
   min-width: 262px;
   max-width: 300px;
   -webkit-transform: scale(0);
@@ -1210,11 +1206,7 @@ body.ie ._ibg img {
 }
 
 .spoller-item-from-to__btn:not(:last-child) {
-  margin-bottom: 10px;
-}
-
-.spoller-item-from-to__btn:not(:last-child) {
-  margin: 0px 0px 20px 0px;
+  margin: 0px 0px 25px 0px;
 }
 
 .spoller-item-from-to__btn::before {
@@ -1449,9 +1441,9 @@ body.ie ._ibg img {
   -webkit-box-shadow: 0px 0px 20px #918f7b;
           box-shadow: 0px 0px 20px #918f7b;
   min-width: 300px;
-  -webkit-transform: translate(0px, 20%);
-      -ms-transform: translate(0px, 20%);
-          transform: translate(0px, 20%);
+  -webkit-transform: translate(0px, 10%);
+      -ms-transform: translate(0px, 10%);
+          transform: translate(0px, 10%);
   opacity: 0;
   -webkit-transition: all 0.8s ease 0s;
   -o-transition: all 0.8s ease 0s;
@@ -1633,7 +1625,7 @@ body.ie ._ibg img {
 }
 
 .content-welcome__image {
-  padding: 0px 0px 65% 0px;
+  padding: 0px 0px 70% 0px;
 }
 
 .info-welcome {
@@ -1858,7 +1850,7 @@ body.ie ._ibg img {
 }
 
 .cosmetics-page__slider {
-  padding: 25px 20px;
+  padding: 5px 20px 25px 20px;
   margin: 0px -20px;
 }
 
@@ -1867,7 +1859,7 @@ body.ie ._ibg img {
 }
 
 .cosmetics-page__button {
-  margin-top: 10px;
+  margin: 10px 0px 15px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2043,10 +2035,6 @@ body.ie ._ibg img {
 
   .spoller-item-from-to__btn {
     font-size: calc(18px + 7 * ((100vw - 320px) / 850));
-  }
-
-  .spoller-item-from-to__btn:not(:last-child) {
-    margin-bottom: calc(5px + 5 * ((100vw - 320px) / 850));
   }
 
   .contact-page__container {
@@ -2239,7 +2227,7 @@ body.ie ._ibg img {
     -webkit-transition: top 0.5s ease 0s;
     -o-transition: top 0.5s ease 0s;
     transition: top 0.5s ease 0s;
-    z-index: 4;
+    z-index: 11;
   }
 
   .menu__body._active {
@@ -2277,7 +2265,7 @@ body.ie ._ibg img {
     width: 40px;
     height: 40px;
     cursor: pointer;
-    z-index: 5;
+    z-index: 12;
   }
 
   .icon-menu span {
@@ -2390,7 +2378,7 @@ body.ie ._ibg img {
   }
 
   .item-serv__image {
-    padding: 0px 0px 28% 0px;
+    padding: 0px 0px 38% 0px;
   }
 
   .contact-page__body {
@@ -2423,7 +2411,7 @@ body.ie ._ibg img {
   }
 
   .content-welcome__image {
-    padding: 0px 0px 50% 0px;
+    padding: 0px 0px 60% 0px;
   }
 
   .info-welcome__text:not(:last-child) {
@@ -2467,7 +2455,7 @@ body.ie ._ibg img {
   }
 
   .item-serv__image {
-    padding: 0px 0px 38% 0px;
+    padding: 0px 0px 55% 0px;
   }
 
   .main-page__image {
@@ -2574,8 +2562,8 @@ body.ie ._ibg img {
   }
 
   .slider-arrow:hover {
-    -webkit-box-shadow: 0px 0px 30px #ad0000;
-            box-shadow: 0px 0px 30px #ad0000;
+    -webkit-box-shadow: 0px 0px 30px #bd0000;
+            box-shadow: 0px 0px 30px #bd0000;
   }
 
   .info-service {
@@ -2614,6 +2602,7 @@ body.ie ._ibg img {
 
   .info-service__btn {
     font-size: 16px;
+    letter-spacing: 0.1em;
   }
 
   .info-service__btn:hover {
