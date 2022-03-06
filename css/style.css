@@ -210,44 +210,6 @@ body._lock {
   margin: 0 auto;
 }
 
-.adwantage-page__body._active .item-adwantage {
-  -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-          transform: scale(1);
-}
-
-.adwantage-page__body._active .item-adwantage:nth-child(1) {
-  -webkit-transition: -webkit-transform 0.8s ease 0s;
-  transition: -webkit-transform 0.8s ease 0s;
-  -o-transition: transform 0.8s ease 0s;
-  transition: transform 0.8s ease 0s;
-  transition: transform 0.8s ease 0s, -webkit-transform 0.8s ease 0s;
-}
-
-.adwantage-page__body._active .item-adwantage:nth-child(2) {
-  -webkit-transition: -webkit-transform 0.8s ease 0.4s;
-  transition: -webkit-transform 0.8s ease 0.4s;
-  -o-transition: transform 0.8s ease 0.4s;
-  transition: transform 0.8s ease 0.4s;
-  transition: transform 0.8s ease 0.4s, -webkit-transform 0.8s ease 0.4s;
-}
-
-.adwantage-page__body._active .item-adwantage:nth-child(3) {
-  -webkit-transition: -webkit-transform 0.8s ease 0.6s;
-  transition: -webkit-transform 0.8s ease 0.6s;
-  -o-transition: transform 0.8s ease 0.6s;
-  transition: transform 0.8s ease 0.6s;
-  transition: transform 0.8s ease 0.6s, -webkit-transform 0.8s ease 0.6s;
-}
-
-.adwantage-page__body._active .item-adwantage:nth-child(4) {
-  -webkit-transition: -webkit-transform 0.8s ease 0.8s;
-  transition: -webkit-transform 0.8s ease 0.8s;
-  -o-transition: transform 0.8s ease 0.8s;
-  transition: transform 0.8s ease 0.8s;
-  transition: transform 0.8s ease 0.8s, -webkit-transform 0.8s ease 0.8s;
-}
-
 .button {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -973,13 +935,17 @@ body.ie ._ibg img {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 20%;
-  -webkit-box-shadow: 0px 0px 25px #837f58;
-          box-shadow: 0px 0px 25px #837f58;
+  -webkit-box-shadow: 0px 6px 25px #837f58;
+          box-shadow: 0px 6px 25px #837f58;
   min-width: 262px;
   max-width: 300px;
-  -webkit-transform: scale(0);
-      -ms-transform: scale(0);
-          transform: scale(0);
+  -webkit-transform: translate(0px, 10%);
+      -ms-transform: translate(0px, 10%);
+          transform: translate(0px, 10%);
+  -webkit-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+  opacity: 0;
 }
 
 .item-adwantage__image {
@@ -1013,6 +979,13 @@ body.ie ._ibg img {
   font-weight: 400;
   color: #634c4c;
   letter-spacing: 0.05em;
+}
+
+.item-adwantage._active {
+  opacity: 1;
+  -webkit-transform: translate(0px, 0px);
+      -ms-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
 }
 
 .service-main {
@@ -1441,9 +1414,9 @@ body.ie ._ibg img {
   -webkit-box-shadow: 0px 0px 20px #918f7b;
           box-shadow: 0px 0px 20px #918f7b;
   min-width: 300px;
-  -webkit-transform: translate(0px, 10%);
-      -ms-transform: translate(0px, 10%);
-          transform: translate(0px, 10%);
+  -webkit-transform: translate(0px, 9%);
+      -ms-transform: translate(0px, 9%);
+          transform: translate(0px, 9%);
   opacity: 0;
   -webkit-transition: all 0.8s ease 0s;
   -o-transition: all 0.8s ease 0s;
