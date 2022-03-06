@@ -2454,6 +2454,10 @@ body.ie ._ibg img {
     margin: 0 auto;
   }
 
+  .service-main__body {
+    gap: 35px;
+  }
+
   .item-serv__image {
     padding: 0px 0px 55% 0px;
   }
