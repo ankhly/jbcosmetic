@@ -12,8 +12,8 @@
   font-style: normal;
 }
 
-.img-comp-slider::after,
-.img-comp-slider::before,
+.change::before,
+.change::after,
 [class*=_icon-]:before {
   font-family: "icons";
   font-style: normal;
@@ -1176,14 +1176,15 @@ body.ie ._ibg img {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+  position: relative;
 }
 
 .spoller-item-from-to__btn:not(:last-child) {
-  margin: 0px 0px 25px 0px;
+  margin: 0px 0px 28px 0px;
 }
 
 .spoller-item-from-to__btn::before {
-  font-size: 15px;
+  font-size: 12px;
   -webkit-transform: rotate(-180deg);
       -ms-transform: rotate(-180deg);
           transform: rotate(-180deg);
@@ -1200,6 +1201,24 @@ body.ie ._ibg img {
           transform: rotate(0deg);
 }
 
+.spoller-item-from-to__btn._active::after {
+  content: "Свернуть";
+  font-family: "Kurale";
+  position: absolute;
+  bottom: 0;
+  right: 35px;
+  font-size: 12px;
+}
+
+.spoller-item-from-to__btn::after {
+  content: "Показать";
+  font-family: "Kurale";
+  position: absolute;
+  bottom: 0;
+  right: 35px;
+  font-size: 12px;
+}
+
 .spoller-item-from-to__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1213,26 +1232,49 @@ body.ie ._ibg img {
 }
 
 .spoller-item-from-to__box {
-  width: 22%;
-  min-width: 270px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 32%;
+          flex: 0 0 32%;
+  min-width: 300px;
 }
 
-.img-comp-container {
+.slid {
   position: relative;
-  padding: 0px 0px 80% 0px;
-  -webkit-box-shadow: 0px 0px 12px #3b3b37;
-          box-shadow: 0px 0px 12px #3b3b37;
-  margin: 0px 0px 10px 0px;
-}
-
-.img-comp-img {
-  position: absolute;
   overflow: hidden;
   width: 100%;
-  padding: 0px 0px 80% 0px;
 }
 
-.img-comp-img::before {
+.slid img {
+  width: 100%;
+  height: 230px;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  z-index: 3;
+  width: 50%;
+  height: 100%;
+}
+
+.before::before {
+  content: "ДО";
+  z-index: 1;
+  font-size: 20px;
+  font-weight: 700;
+  top: 10px;
+  padding: 3px 5px;
+  background-color: #ffffff;
+  position: absolute;
+  left: 10px;
+}
+
+.after::before {
   content: "ПОСЛЕ";
   z-index: 1;
   font-size: 20px;
@@ -1240,59 +1282,58 @@ body.ie ._ibg img {
   top: 10px;
   position: absolute;
   right: 10px;
+  padding: 3px 5px;
+  background-color: #ffffff;
 }
 
-.img-comp-img img {
-  display: block;
-  vertical-align: middle;
+.change {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  z-index: 10;
+  width: 1px;
   height: 100%;
-  width: 100%;
+  background-color: #70595e;
 }
 
-.img-comp-overlay {
-  z-index: 2;
-}
-
-.img-comp-overlay::before {
-  content: "ДО";
-  z-index: 1;
-  font-size: 20px;
-  font-weight: 700;
-  top: 10px;
+.change::after {
   position: absolute;
-  left: 10px;
-}
-
-.img-comp-slider {
-  position: absolute;
-  z-index: 9;
-  cursor: ew-resize;
-  width: 40px;
-  height: 40px;
-  border: 2px solid #ffd900;
-  background-color: rgba(255, 255, 255, 0.712);
-  opacity: 0.7;
-  border-radius: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.img-comp-slider::before {
-  content: "\e900";
-  font-size: 9px;
-  -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-          transform: rotate(90deg);
-  margin: 16px 20px 16px 2px;
-}
-
-.img-comp-slider::after {
+  z-index: 11;
+  left: 0;
+  top: 48%;
   content: "\e900";
   font-size: 9px;
   -webkit-transform: rotate(-90deg);
       -ms-transform: rotate(-90deg);
           transform: rotate(-90deg);
+}
+
+.change::before {
+  position: absolute;
+  z-index: 11;
+  left: 0;
+  top: 48%;
+  content: "\e900";
+  font-size: 9px;
+  -webkit-transform: translate(-93%, 0%) rotate(90deg);
+      -ms-transform: translate(-93%, 0%) rotate(90deg);
+          transform: translate(-93%, 0%) rotate(90deg);
+}
+
+.change span {
+  position: absolute;
+  z-index: 10;
+  left: 50%;
+  top: 50%;
+  cursor: ew-resize;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #ffd900;
+  background-color: rgba(255, 255, 255, 0.712);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 50%;
 }
 
 .contact-page {
@@ -2359,6 +2400,10 @@ body.ie ._ibg img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+
+  .contact-page__image {
+    margin: 0px 0px 30px 0px;
   }
 
   .main-page__fullscreen::before {
