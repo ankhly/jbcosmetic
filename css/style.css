@@ -422,6 +422,9 @@ body.ie ._ibg img {
 
 .header {
   background-color: rgba(236, 228, 228, 0.438);
+  position: fixed;
+  z-index: 16;
+  width: 100%;
 }
 
 .header__container {
@@ -1506,6 +1509,7 @@ body.ie ._ibg img {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
+  margin: 80px 0px 0px 0px;
 }
 
 .main-page__container {
